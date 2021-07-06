@@ -28,53 +28,61 @@ letsGo.addEventListener('click', (event) => {
         }, 200);
 })
 
-const buttonBlink = document.querySelectorAll('.nav-link').forEach(event => {
-buttonBlink.addEventListener('mouseover', () => {
-    event.target.style.color = 'red';
-    event.target.style.backgroundColor = '#F5F5F5';
-    event.target.style.padding = '15px';
-    event.target.style.borderRadius = '10px';
-    });
-}); 
-
-const buttonBack = document.querySelectorAll('.nav-link').forEach(event => {
-buttonBack.addEventListener('mouseout', () => {
-    event.target.style.color = 'black';
-    event.target.style.backgroundColor = 'white';
-    event.target.style.padding = '0px';
-    event.target.style.borderRadius = '0px';
+const buttonBack = document.querySelectorAll('.nav-link');
+buttonBack.forEach(e => {
+e.addEventListener('mouseout', () => {
+    e.style = 'color: black';
+    e.style.backgroundColor = 'white';
+    e.style.padding = '0px';
+    e.style.borderRadius = '0px';
     });
 }); 
     
-
-const sunReady = document.querySelectorAll('.destination h4').forEach(event => {
-sunReady.addEventListener('dblclick', () => {
-event.target.style.backgroundColor = 'yellow';
-    });
-}); 
-
-const orangeBtn = document.querySelectorAll('.destination h4').forEach(event => {
-    orangeBtn.addEventListener('contextmenu', () => {
-    event.target.style.backgroundColor = 'orange';
+const buttonBlink = document.querySelectorAll('.nav-link');
+buttonBlink.forEach(e => {
+    e.addEventListener('mouseover', () => {
+        e.style.backgroundColor = '#F5F5F5';
+        e.style.padding = '15px';
+        e.style.borderRadius = '10px';
         });
     }); 
 
-const btn1 = document.querySelectorAll('.btn').forEach(event => {
-    btn1.addEventListener('keydown', () => {
-    event.target.style.color = 'red';
+    
+const sunReady = document.querySelectorAll('.destination h4');
+sunReady.forEach(e => {
+e.addEventListener('dblclick', () => {
+e.style.backgroundColor = 'yellow';
     });
 }); 
 
-const btn2 = document.querySelectorAll('.btn').forEach(event => {
-    btn2.addEventListener('keyup', () => {
-    event.target.style.color = 'white';
-    event.stopPropagation();
+const orangeBtn = document.querySelectorAll('.destination h4');
+orangeBtn.forEach(e => {
+    e.addEventListener('contextmenu', () => {
+    e.style.backgroundColor = 'orange';
         });
     }); 
 
-document.querySelectorAll('.btn').forEach(addEventListener('click', function(event) {
-    event.preventDefault();
-    }));
+const btn1 = document.querySelectorAll('.btn');
+btn1.forEach(e => {
+    e.addEventListener('keydown', () => {
+    e.style.color = 'red';
+    });
+}); 
+
+const btn2 = document.querySelectorAll('.btn');
+btn2.forEach(e => {
+    e.addEventListener('keyup', () => {
+    e.style.color = 'white';
+    e.stopPropagation();
+        });
+    }); 
+
+const btn = document.querySelectorAll('.btn');
+btn.forEach(e => {
+    e.addEventListener('click', function(e) {
+    e.preventDefault();
+    });
+});
  
 
 
